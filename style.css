@@ -1,0 +1,171 @@
+@font-face {
+  font-family: kanit;
+  src: url("assets/fonts/kanit-semibold.woff");
+}
+@font-face {
+  font-family: kanit-bold;
+  src: url("assets/fonts/kanit-bold.woff");
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+.conteneur {
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+  font-family: kanit;
+  color: white;
+  overflow: hidden;
+}
+.conteneur header {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 50px;
+  overflow: hidden;
+}
+.conteneur header .head {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: max-content;
+  overflow: hidden;
+}
+.conteneur header .head .anim-head {
+  animation: anim-head 0.5s ease-out;
+  animation-delay: 0.3s;
+  transform: translateY(-60px);
+  animation-fill-mode: forwards;
+}
+.conteneur header .head nav {
+  flex: 1;
+}
+.conteneur header .head nav ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.conteneur header .head nav ul li {
+  position: relative;
+  cursor: pointer;
+}
+.conteneur header .head nav ul li::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transform: scaleX(0);
+  border: 1px solid white;
+  content: "";
+  transition: transform 0.5s ease;
+  margin-top: 1px;
+}
+.conteneur header .head nav ul li:hover::after {
+  transform: scaleX(1);
+}
+.conteneur header .head .logo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  text-align: center;
+}
+.conteneur header .head .icon-group {
+  display: flex;
+  flex: 1;
+  justify-content: end;
+  gap: 15px;
+}
+.conteneur .corps {
+  width: 100%;
+  padding-top: 30px;
+}
+.conteneur .corps h1 {
+  text-align: center;
+  font-size: 5.5555555556vw;
+  font-weight: bold;
+  letter-spacing: 5px;
+  overflow: hidden;
+  height: max-content;
+  overflow: hidden;
+  font-family: kanit-bold;
+  letter-spacing: 5px;
+}
+.conteneur .corps h1 span {
+  overflow: hidden;
+  height: max-content;
+  display: block;
+}
+.conteneur .corps h1 span .sp1 {
+  animation: title 0.7s ease-out;
+  animation-fill-mode: forwards;
+  transform: translateY(70px);
+}
+.conteneur .corps h1 span .sp2 {
+  animation: title 0.5s ease-out;
+  animation-delay: 0.4s;
+  animation-fill-mode: forwards;
+  transform: translateY(80px);
+  color: transparent;
+  -webkit-text-stroke: 3px #fff;
+  text-stroke: 2px #fff;
+}
+.conteneur .corps .img-group {
+  padding-top: 50px;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  flex-grow: 1;
+}
+.conteneur .corps .img-group div {
+  overflow: hidden;
+  position: relative;
+}
+.conteneur .corps .img-group div div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  top: 0;
+  left: 0;
+  animation: anim-img 0.6s ease-out;
+  animation-fill-mode: forwards;
+}
+.conteneur .corps .img-group div .ig1 {
+  animation-delay: 0.5s;
+}
+.conteneur .corps .img-group div .ig2 {
+  animation-delay: 0.8s;
+}
+.conteneur .corps .img-group div .ig3 {
+  animation-delay: 1.1s;
+}
+.conteneur .corps .img-group div img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes title {
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes anim-head {
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes anim-img {
+  100% {
+    height: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
